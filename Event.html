@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>School Event Reservation System</title>
+
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.navbar-nav li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #e3e3e3;
+}
+
+.card {
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form button[type="submit"] {
+  background-color: #0b126e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0b126e;
+}
+
+.reservation-list {
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.reservation-list h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#search {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#reservations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#reservations li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+</style>
+
+
+</head>
+<body>
+   <!-- NAV BAR  -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">Home</a>
+        </li>       
+      <li class="nav-item">
+        <a id="navvy" class="nav-link" href="#ad">Event booking</a>
+      </li>
+        <li class="nav-item"> 
+          <a id="navvy" class="nav-link" href="Upcoming Event.html">Upcoming Event</a>
+      </li> 
+      
+    </ul>
+  </div>
+  <nav>
+
+  <div id="home" class="card mx-auto">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img
+          src="IMG/buildings.jpg"
+          class="card-img img-fluid img-thumbnail"
+          alt="profile picture"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="IMG/1.jpeg"
+          class="card-img img-fluid img-thumbnail"
+          alt="profile picture"
+        />
+      </div>
+      
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">Ecstasy Annual Cultural Festival</h2>
+          <hr />
+          <p class="card-text">
+           <b>Ecstasy is the annual cultural fest of Central Institute of Technology, Kokrajhar, Assam.
+             Being one of the largest cultural fest in entire lower Assam which witnessed various national and international artists. 
+            Spread over 3 days and 3 nights, Every year it is conducted at the end of February.<b></p>
+             
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<center>
+  <h1 id="ad">Event Reservation System</h1></center>
+  <div class="form-container">
+    <!-- Reservation Form -->
+    <form id="reservation-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="grade">Grade:</label>
+      <input type="number" id="grade" required>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" required>
+
+      <label for="date">Date of Event:</label>
+      <input type="date" id="date" required>
+
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </div>
+
+  <div class="reservation-list">
+    <h2>Reservation List</h2>
+    <input type="text" id="search" placeholder="Search by Name">
+    <ul id="reservations">
+      <!-- The JavaScript code will dynamically update this list -->
+    </ul>
+  </div>
+
+  <script src="am.js"></script>
+</body>
+</html>
+ 
